@@ -10,8 +10,8 @@
 	},
 
 	"icons": {
-		"48": "icons/icon.svg",
-		"96": "icons/icon.svg"
+		"48": "Icons/icon.svg",
+		"96": "Icons/icon.svg"
 	},
 
 	"web_accessible_resources": [
