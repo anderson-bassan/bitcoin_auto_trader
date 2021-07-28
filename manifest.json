@@ -16,5 +16,9 @@
 
 	"web_accessible_resources": [
     	"Audios/*.mp3"
+  ],
+
+  "permissions": [
+  	"<all_urls>"
   ]
 }
