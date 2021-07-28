@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2,
+	"name": "Bitpreco Auto Trader",
+	"version": "0.1",
+
+	"description": "plaly a sound when bitcoins goes bellow the desired value",
+
+	"background": {
+		"scripts": ["bitcoin_auto_trader.js"]
+	},
+
+	"icons": {
+		"48": "icons/icon.svg",
+		"96": "icons/icon.svg"
+	},
+}
