@@ -12,5 +12,9 @@
 	"icons": {
 		"48": "icons/icon.svg",
 		"96": "icons/icon.svg"
-	}
+	},
+
+	"web_accessible_resources": [
+    	"Audios/*.mp3"
+  ]
 }
