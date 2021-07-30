@@ -16,5 +16,10 @@
 
 	"web_accessible_resources": [
     	"Audios/*.mp3"
-  ]
+ 	],
+
+ 	"permissions": [
+  		"tabs",
+  		"<all_urls>"
+	]
 }
