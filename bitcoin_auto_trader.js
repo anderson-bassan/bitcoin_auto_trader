@@ -45,9 +45,6 @@ let getBitcoinPrice = async (tabs) => {
 	});
 
 	let get_bitcoin_price = gets_bitpreco_tab_id.then((tab, tabs) => {
-		// let hilights_tab = browser.tabs.highlight({tabs: [tab.index],windowId: tab.WindowId});
-		// hilights_tab.then(e => console.log(e));
-
 		let get_current_btc_price_code = `document.querySelectorAll('#root div div header div div div:nth-of-type(2) div')[6].innerText.slice(16).replace('.', '').replace(',', '.');`;
 
 		let run_code_in_tab = browser.tabs.executeScript(tab.id, {code: get_current_btc_price_code});
@@ -63,7 +60,16 @@ let getBitcoinPrice = async (tabs) => {
 };
 
 let main = async (tabs) => {
-	getBitcoinPrice().then(e => console.log('get bitcoin price -> ', e[0]));
+	let desired_price = 200500;
+
+	setInterval(() => {
+		getBitcoinPrice().then(bitcoin_prices => {
+			if (bitcoin_prices[0] > desired_price) {
+				new Audio('https://freesound.org/data/previews/234/234524_4019029-lq.mp3').play();
+			}
+
+		});
+	}, 1000);
 
 };
 
