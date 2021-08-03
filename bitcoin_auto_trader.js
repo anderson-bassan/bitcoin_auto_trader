@@ -34,8 +34,11 @@ let isBitprecoOpen = async (tabs) => {
 
 };
 
-let openBitpreco = () => {
+let openBitpreco = (tabs) => {
 	/* insert wholesome code here */
+
+	/* opens bitpreco in a new tab */
+	browser.tabs.create({url: 'https://market.bitpreco.com/trade'});
 }
 
 let getBitcoinPrice = () => {
@@ -57,7 +60,6 @@ let main = () => {
 		/* If bitpreco is not open opens it */
 
 		if (! is_bitpreco_open ) {
-			console.log('opening bitpreco')
 			openBitpreco();
 		
 		}
